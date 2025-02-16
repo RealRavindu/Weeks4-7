@@ -329,62 +329,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038621132}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.644, y: -0.661, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.18900001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1615600756}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1245159131
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1245159133}
-  - component: {fileID: 1245159132}
-  m_Layer: 0
-  m_Name: Gravity
-  m_TagString: gravity
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1245159132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245159131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72e5b1bbb1cbeb846b559aae2cea95ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: {x: 0, y: 0}
-  GravScale: 0.2
-  mass: 0
-  IV: {x: 0, y: 0}
-  FV: {x: 0, y: 0}
---- !u!4 &1245159133
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245159131}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.093422, y: -1.2838211, z: 0.16308641}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1721279520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1615600754
 GameObject:
@@ -483,7 +434,7 @@ GameObject:
   - component: {fileID: 1721279518}
   m_Layer: 0
   m_Name: tanks_tankGreen_body3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -500,6 +451,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21bac7604ebe44942a42aa7499ae9a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravPrefab: {fileID: 4843981957355357313, guid: 519302946cc0a8746978386016f6375f, type: 3}
+  gravCalc: {fileID: 0}
+  GravityScript: {fileID: 0}
+  frictionScale: 0.1
+  mass: 10
+  vertForceScale: 7
+  horForceScale: 20
+  resultantForce: {x: 0, y: 0}
+  groundLevel: 0
+  isGrounded: 0
+  movingLeft: 0
+  movingRight: 0
+  VFV: {x: 0, y: 0}
 --- !u!212 &1721279519
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -561,11 +525,12 @@ Transform:
   m_GameObject: {fileID: 1721279517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.644, y: -0.828, z: 0}
+  m_LocalPosition: {x: -1.644, y: -0.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 252186434}
+  - {fileID: 1038621134}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1727406495
@@ -666,6 +631,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1727406498}
   - {fileID: 1721279520}
-  - {fileID: 1038621134}
   - {fileID: 65416127}
-  - {fileID: 1245159133}

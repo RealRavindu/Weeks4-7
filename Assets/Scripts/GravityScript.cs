@@ -22,7 +22,7 @@ public class GravityScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("force: " + force + " mass: " + mass + "acceleration: " + acceleration + "IV: " + IV + "gravity: " + gravity);
+        Debug.Log("force: " + force + " |mass: " + mass + " |acceleration: " + acceleration + " |IV: " + IV + " |gravity: " + gravity);
         
     }
 

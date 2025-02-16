@@ -51,30 +51,22 @@ MonoBehaviour:
   - {fileID: -138209937, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
   - {fileID: -679358172, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
   - {fileID: -1048973536, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: 1491619036, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: 908232216, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: 1924100185, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
+  - {fileID: 1478117742, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
   - {fileID: -993620502, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: -1259242931, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: 940300221, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
   - {fileID: 11452861, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
   - {fileID: 1326287347, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
   - {fileID: -1347393710, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
   - {fileID: 1562460632, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: -1492256074, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: -2045265966, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: -1794797048, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
   - {fileID: 1723217373, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: 1478117742, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: -1649698451, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: 248764472, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: 673590462, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: -2105000202, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
-  - {fileID: -838893399, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
+  - {fileID: -1794797048, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
+  - {fileID: -1492256074, guid: 529af4bdebfb57844ac40648c60dbc05, type: 3}
+  gravPrefab: {fileID: 4843981957355357313, guid: 519302946cc0a8746978386016f6375f, type: 3}
   gravCalc: {fileID: 0}
   gravScript: {fileID: 0}
-  forceScale: 1.5
-  mass: 0.2
+  explosionPrefab: {fileID: 8582998087680914664, guid: 0e33c50ad77fb734fad5ba0ab7d33f21, type: 3}
+  forceScale: 2.5
+  mass: 1
+  velocity: {x: 0, y: 0}
 --- !u!212 &1742262487045498624
 SpriteRenderer:
   m_ObjectHideFlags: 0
