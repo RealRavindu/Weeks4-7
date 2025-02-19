@@ -5,7 +5,7 @@ using UnityEngine;
 public class HandManagerScript : MonoBehaviour
 {
     public int itemID;
-    public List<GameObject> factoryPartsList = new List<GameObject>();
+    public GameObject prefabFactoryPart;
     public GameObject inHand;
     Quaternion rotationAxis = new Quaternion(0,0,0,0);
 
@@ -36,19 +36,19 @@ public class HandManagerScript : MonoBehaviour
     
     void holding()
     {
-        if (itemID == 1)
-        {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = -1;
             inHand.transform.position = mousePos;
-        }
-    }
-    public void clickConveyorBelt()
-    {
         
-        itemID = 1;
+    }
+    public void clickButtonFactoryPart(int number)
+    {
+
+        itemID = number;
         Destroy(inHand);
-        inHand = GameObject.Instantiate(factoryPartsList[itemID]);
+        inHand = GameObject.Instantiate(prefabFactoryPart);
+        FactoryPartScript tileScript = inHand.GetComponent<FactoryPartScript>();
+        tileScript.partNumber = itemID;
         inHand.transform.rotation = rotationAxis;
         Debug.Log("button clicked, this is itemID: " + itemID + " |inHand transform: " + inHand.transform.position);
     }

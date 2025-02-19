@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class FactoryPartScript : MonoBehaviour
 {
+    public List<Sprite> spriteList = new List<Sprite>();
+    public int partNumber = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.GetComponent<SpriteRenderer>().sprite = spriteList[partNumber];
     }
 
     // Update is called once per frame

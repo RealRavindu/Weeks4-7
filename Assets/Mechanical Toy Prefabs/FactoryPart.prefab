@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6675031620131062858}
   - component: {fileID: 6645527189471219623}
   m_Layer: 0
-  m_Name: Conveyor
+  m_Name: FactoryPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,3 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dff56a41aabeaf4e9e9b428fca02829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 91ec49cf2cc389648a1d6295960d13a8, type: 3}
+  - {fileID: 21300000, guid: 0c2adeffc7afa314dae16c1d77ca4c56, type: 3}
+  - {fileID: 21300000, guid: baeb9115cf279bc4690d44bca2a38f3f, type: 3}
+  - {fileID: 21300000, guid: d62abb2858b735f4ba5ee23eaaf436a8, type: 3}
+  partNumber: 0

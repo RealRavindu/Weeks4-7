@@ -93,5 +93,13 @@ public class GridManagerScript : MonoBehaviour
                 tileScript.deleteTile();
             }
         }
+        foreach (GameObject T in tileList)
+        {
+            GridTile tileScript = T.GetComponent<GridTile>();
+            if (HandManager.inHand == null && tileScript.checkIfHover() && tileScript.containsTile)
+            {
+                tileScript.containsTile = false;
+            }
+        }
     }
 }
