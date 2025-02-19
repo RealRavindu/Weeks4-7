@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7055890556622616132}
   - component: {fileID: 6675031620131062858}
-  - component: {fileID: 4307429724824217001}
+  - component: {fileID: 6645527189471219623}
   m_Layer: 0
   m_Name: Conveyor
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.3409743, y: 4.145232, z: -0.04955789}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4307429724824217001
+--- !u!114 &6645527189471219623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,6 +94,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8632940773885288269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8300855ed3ab09545bef4dc298800747, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dff56a41aabeaf4e9e9b428fca02829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

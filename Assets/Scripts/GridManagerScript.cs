@@ -36,9 +36,22 @@ public class GridManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             placeTile();
+        }
+
+        if (Input.GetMouseButton(1))
+        {
+            removeTile();
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Debug.Log("Tiles in placed list");
+            foreach(GameObject T in placedList)
+            {
+                Debug.Log(T.transform.position);
+            }
         }
         
     }
@@ -57,11 +70,27 @@ public class GridManagerScript : MonoBehaviour
             tilePlacementPosition = T.transform.position;
             tilePlacementPosition.z = -1;
             GridTile tileScript = T.GetComponent<GridTile>();
-            if (HandManager.inHand != null && tileScript.checkIfHover())
+            if (HandManager.inHand != null && tileScript.checkIfHover() && !tileScript.containsTile)
             {
+                tileScript.containsTile = true;
                 Debug.Log("Placeable, placing at: " + T.transform.position);
                 GameObject placedTile = Instantiate(HandManager.inHand, tilePlacementPosition, HandManager.inHand.transform.rotation);
-                placedList.Add(HandManager.inHand);
+                placedList.Add(placedTile);
+            }
+        }
+    }
+
+    void removeTile()
+    {
+        Debug.Log("Click went through checking if removable");
+        foreach (GameObject T in placedList)
+        {
+            FactoryPartScript tileScript = T.GetComponent<FactoryPartScript>();
+            if (HandManager.itemID == 0 && tileScript.checkIfHover())
+            {
+                Debug.Log("Removable, removing at: " + T.transform.position);
+                placedList.Remove(T);
+                tileScript.deleteTile();
             }
         }
     }

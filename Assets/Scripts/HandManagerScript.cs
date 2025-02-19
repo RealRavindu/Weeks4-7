@@ -24,7 +24,7 @@ public class HandManagerScript : MonoBehaviour
         {
             Debug.Log("Right click clicked");
             itemID = 0;
-            inHand = null;
+            Destroy(inHand);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -47,7 +47,7 @@ public class HandManagerScript : MonoBehaviour
     {
         
         itemID = 1;
-        inHand = null;
+        Destroy(inHand);
         inHand = GameObject.Instantiate(factoryPartsList[itemID]);
         inHand.transform.rotation = rotationAxis;
         Debug.Log("button clicked, this is itemID: " + itemID + " |inHand transform: " + inHand.transform.position);

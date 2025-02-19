@@ -201,8 +201,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileList: []
+  placedList: []
   tile: {fileID: 2562578676173072822, guid: 2e72bb2c3557fd84b93e522daa7252a6, type: 3}
-  HandManager: {fileID: 913352550}
+  HandManager: {fileID: 913352551}
   rowNum: 8
   colNum: 8
 --- !u!4 &1174878292
