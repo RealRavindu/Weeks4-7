@@ -6,6 +6,7 @@ public class GridManagerScript : MonoBehaviour
 {
     public List<GameObject> tileList = new List<GameObject>();
     public List<GameObject> placedList = new List<GameObject>();
+    public Canvas canvas;
     public GameObject tile;
     public GameObject outputterPrefab;
     public GameObject inputterPrefab;
