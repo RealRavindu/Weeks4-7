@@ -7,7 +7,12 @@ public class GridManagerScript : MonoBehaviour
     public List<GameObject> tileList = new List<GameObject>();
     public List<GameObject> placedList = new List<GameObject>();
     public GameObject tile;
+    public GameObject outputterPrefab;
+    public GameObject inputterPrefab;
+    private int inputterType;
+    private int outputterType;
     public HandManagerScript HandManager;
+    private int randomInputterLocation;
     private Vector3 tilePlacementPosition = Vector3.zero;
     int tileID =0;
     public float rowNum = 8;
@@ -16,19 +21,27 @@ public class GridManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for(int i=0; i<rowNum; i++)
+        chooseRandomInputterLocation();
+
+        for(int j=0; j< colNum; j++)
         {
-            for(int j=0; j<colNum; j++)
+            for (int i = 0; i < rowNum; i++)
             {
                 tileID++;
-                if(tileID == 2)
+                if (tileID == 58 || tileID ==63)
+                {
+                    spawnOutputter(i, j, outputterType);
+                    outputterType++;
+
+                } else if (tileID == 2 || tileID == 7 || tileID == randomInputterLocation)
                 {
 
-                } else if(tileID == 7)
+                    spawnInputter(i, j, inputterType);
+                    inputterType++;
+                } else
                 {
-
+                    instantiateTile(i, j);
                 }
-                instantiateTile(i, j);
             }
         }
     }
@@ -54,6 +67,15 @@ public class GridManagerScript : MonoBehaviour
             }
         }
         
+    }
+
+    void chooseRandomInputterLocation()
+    {
+        randomInputterLocation = (int)Random.Range(1, 24);
+        if (randomInputterLocation == 2 || randomInputterLocation == 7)
+        {
+            chooseRandomInputterLocation();
+        }
     }
 
     void instantiateTile(float i, float j)
@@ -91,6 +113,7 @@ public class GridManagerScript : MonoBehaviour
                 Debug.Log("Removable, removing at: " + T.transform.position);
                 placedList.Remove(T);
                 tileScript.deleteTile();
+                break;
             }
         }
         foreach (GameObject T in tileList)
@@ -99,7 +122,23 @@ public class GridManagerScript : MonoBehaviour
             if (HandManager.inHand == null && tileScript.checkIfHover() && tileScript.containsTile)
             {
                 tileScript.containsTile = false;
+                break;
             }
         }
+    }
+
+    void spawnOutputter(float i, float j, int type)
+    {
+        GameObject spawnedOutputter = Instantiate(outputterPrefab, new Vector2(i + 0.5f, j + 0.5f), Quaternion.identity);
+        OutputterScript outputterScript = spawnedOutputter.GetComponent<OutputterScript>();
+        outputterScript.typeOfParticle = type;
+        //tileList.Add(spawnedOutputter);
+    }
+    void spawnInputter(float i, float j, int type)
+    {
+        GameObject spawnedInputter = Instantiate(inputterPrefab, new Vector2(i + 0.5f, j + 0.5f), Quaternion.identity);
+        InputterScript inputterScript = spawnedInputter.GetComponent<InputterScript>();
+        inputterScript.typeOfParticle = type;
+        //tileList.Add(spawnedInputter);
     }
 }

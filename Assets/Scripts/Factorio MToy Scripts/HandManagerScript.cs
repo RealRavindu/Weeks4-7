@@ -38,7 +38,10 @@ public class HandManagerScript : MonoBehaviour
     {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = -1;
-            inHand.transform.position = mousePos;
+            if(inHand != null)
+            {
+                inHand.transform.position = mousePos;
+            }
         
     }
     public void clickButtonFactoryPart(int number)

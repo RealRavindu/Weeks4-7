@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 74617252}
   - component: {fileID: 74617251}
   - component: {fileID: 74617250}
-  - component: {fileID: 74617249}
   m_Layer: 5
   m_Name: Constructor Button
   m_TagString: Untagged
@@ -161,18 +160,6 @@ RectTransform:
   m_AnchoredPosition: {x: -306, y: 29.2}
   m_SizeDelta: {x: -1001, y: -490}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &74617249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74617247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de0cf2154667b124cba44fa637dfb6c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &74617250
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -279,7 +266,6 @@ GameObject:
   - component: {fileID: 778852052}
   - component: {fileID: 778852051}
   - component: {fileID: 778852050}
-  - component: {fileID: 778852049}
   m_Layer: 5
   m_Name: Splitter Button
   m_TagString: Untagged
@@ -306,18 +292,6 @@ RectTransform:
   m_AnchoredPosition: {x: 127, y: 164}
   m_SizeDelta: {x: -1001, y: -490}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &778852049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778852047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de0cf2154667b124cba44fa637dfb6c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &778852050
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -424,7 +398,6 @@ GameObject:
   - component: {fileID: 912370773}
   - component: {fileID: 912370772}
   - component: {fileID: 912370771}
-  - component: {fileID: 912370770}
   m_Layer: 5
   m_Name: Deconstructor Button
   m_TagString: Untagged
@@ -451,18 +424,6 @@ RectTransform:
   m_AnchoredPosition: {x: 27, y: 29.2}
   m_SizeDelta: {x: -1001, y: -490}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &912370770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912370768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de0cf2154667b124cba44fa637dfb6c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &912370771
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -636,6 +597,8 @@ MonoBehaviour:
   tileList: []
   placedList: []
   tile: {fileID: 2562578676173072822, guid: 2e72bb2c3557fd84b93e522daa7252a6, type: 3}
+  outputterPrefab: {fileID: 4494265930423710416, guid: 92f7dfac936f4d54e885adeee3c69ad0, type: 3}
+  inputterPrefab: {fileID: 2317529653048352706, guid: 3b6c0eb0156ad6d4395eac5a9e3293cf, type: 3}
   HandManager: {fileID: 913352551}
   rowNum: 8
   colNum: 8
@@ -792,10 +755,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1399740546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.013, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6, y: -0.000061035156}
-  m_SizeDelta: {x: -1001, y: -490}
+  m_AnchoredPosition: {x: 4.8762817, y: 0}
+  m_SizeDelta: {x: -986.7525, y: -490}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1426572039
 MonoBehaviour:
@@ -1007,7 +970,6 @@ GameObject:
   - component: {fileID: 2146610897}
   - component: {fileID: 2146610896}
   - component: {fileID: 2146610895}
-  - component: {fileID: 2146610898}
   m_Layer: 5
   m_Name: Conveyor Button
   m_TagString: Untagged
@@ -1128,18 +1090,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2146610898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146610893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de0cf2154667b124cba44fa637dfb6c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
