@@ -72,7 +72,7 @@ public class GridManagerScript : MonoBehaviour
     void chooseRandomInputterLocation()
     {
         randomInputterLocation = (int)Random.Range(1, 24);
-        if (randomInputterLocation == 2 || randomInputterLocation == 7)
+        if (randomInputterLocation == 2 || randomInputterLocation == 7 || randomInputterLocation == 10 || randomInputterLocation == 15)
         {
             chooseRandomInputterLocation();
         }

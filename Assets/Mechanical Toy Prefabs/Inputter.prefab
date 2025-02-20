@@ -97,3 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895fb596df1d643439d57872d5866330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeOfParticle: 0
+  overlayImagePrefab: {fileID: 411547813713448636, guid: 61f8722f282f5d1459d7a78702987259, type: 3}

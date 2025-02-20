@@ -629,6 +629,7 @@ GameObject:
   - component: {fileID: 1399740545}
   - component: {fileID: 1399740544}
   - component: {fileID: 1399740543}
+  - component: {fileID: 1399740547}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -723,6 +724,23 @@ RectTransform:
   m_AnchoredPosition: {x: 7.92, y: 0}
   m_SizeDelta: {x: 1101, y: 590}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1399740547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399740542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b98fcea81b89f3439aaace7686166f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overlayImagePrefab: {fileID: 411547813713448636, guid: 61f8722f282f5d1459d7a78702987259, type: 3}
+  overlayImages:
+  - {fileID: 21300000, guid: f4c045ed462d65148b42a3328c214c35, type: 3}
+  - {fileID: 21300000, guid: 960d3b28080eed84f9c268fe40018009, type: 3}
+  - {fileID: 21300000, guid: f2a4087685abedf42a80a9c5409e6124, type: 3}
 --- !u!1 &1426572037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,5 +1115,5 @@ SceneRoots:
   - {fileID: 1682053935}
   - {fileID: 1174878292}
   - {fileID: 913352552}
-  - {fileID: 1399740546}
   - {fileID: 1477178908}
+  - {fileID: 1399740546}
