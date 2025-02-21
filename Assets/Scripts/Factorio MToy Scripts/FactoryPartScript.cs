@@ -9,6 +9,7 @@ public class FactoryPartScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //chooses the right sprite from a list. All parts behave the same way so a list to choose the sprite made sense.
         gameObject.GetComponent<SpriteRenderer>().sprite = spriteList[partNumber];
     }
 
@@ -17,11 +18,13 @@ public class FactoryPartScript : MonoBehaviour
     {
         
     }
-
+    //deletes itself
     public void deleteTile()
     {
         Destroy(gameObject);
     }
+
+    //checks if the mouse is between it's dimensions and returns true if so. This code is explained more in-depth in the GridTile script.
     public bool checkIfHover()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

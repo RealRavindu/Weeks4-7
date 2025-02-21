@@ -20,20 +20,22 @@ public class HandManagerScript : MonoBehaviour
     {
         holding();
 
+        //right click gets rid of the gameobject from the hand by deleting it.
         if (Input.GetMouseButtonDown(1))
         {
-            Debug.Log("Right click clicked");
             itemID = 0;
             Destroy(inHand);
         }
 
+        //rotates the gameObject in hand by 90 degrees clockwise.
         if (Input.GetKeyDown(KeyCode.R))
         {
             inHand.transform.Rotate(0,0,-90);
-            Debug.Log("Current rotation: " + inHand.transform.rotation + " |Current position: " + inHand.transform.position);
+            
         }
     }
     
+    //makes the spawned gameobject follow the cursor.
     void holding()
     {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -44,6 +46,8 @@ public class HandManagerScript : MonoBehaviour
             }
         
     }
+
+    //spawns a gameobject that is now 'in the hand' i.e. following the mouse cursor and enables CERTAIN interactions with the grid while disabling other interactions.
     public void clickButtonFactoryPart(int number)
     {
 
